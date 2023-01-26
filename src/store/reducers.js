@@ -16,15 +16,15 @@ export function serviceListReducer(state = initialState, action) {
                 error: null
             }
         case LOAD_SERVICES_SUCCESS:
-            const {items} = action.payload
+            const services = action.payload
             return {
                 ...state,
-                services: items,
+                services: services,
                 loading: false,
                 error: null,
             }
         case LOAD_SERVICES_ERROR:
-            const {error} = action.payload
+            const error = action.payload
             return {
                 ...state,
                 loading: false,
@@ -44,15 +44,15 @@ export function serviceDetailsReducer(state = initialState, action) {
                 error: null
             }
         case LOAD_SERVICE_DETAILS_SUCCESS:
-            const {item} = action.payload
+            const serviceDetails = action.payload
             return {
                 ...state,
-                serviceDetails: item,
+                serviceDetails: serviceDetails,
                 loading: false,
                 error: null
             }
         case LOAD_SERVICE_DETAILS_ERROR:
-            const {error} = action.payload
+            const error = action.payload
             return {
                 ...state,
                 loading: false,
